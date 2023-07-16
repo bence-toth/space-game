@@ -17,6 +17,13 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   padding: 20px;
   gap: 20px;
+  background-image: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    hsla(0deg 0% 100% / 15%),
+    hsla(0deg 0% 100% / 15%) 10%,
+    transparent 20%
+  );
+  background-attachment: fixed;
 }
 
 .level {
