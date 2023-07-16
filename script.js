@@ -28,3 +28,15 @@ window.addEventListener("mousemove", (mouseMoveEvent) => {
     `${(25 + distanceFromCenter * 10).toFixed(4)}%`
   );
 });
+
+const starsHTML = new Array(120).fill(`<div></div>`).join("");
+document.querySelector(".stars").innerHTML = starsHTML;
+
+const stars = document.querySelectorAll(".stars > div");
+stars.forEach((star) => {
+  let x = `${Math.random() * 300 - 100}vw`;
+  let y = `${Math.random() * 300 - 100}vh`;
+  star.style.setProperty("--x", x);
+  star.style.setProperty("--y", y);
+  star.style.setProperty("--delay", `${Math.random() * 1.5}s`);
+});
